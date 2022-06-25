@@ -89,7 +89,7 @@ public class Res extends RESTService {
    * 
    * @param body  a JSONObject
    * 
-   * @return Response 
+   * @return Response user description
    * 
    */
   @POST
@@ -97,7 +97,7 @@ public class Res extends RESTService {
   @Produces(MediaType.APPLICATION_JSON)
   @Consumes(MediaType.APPLICATION_JSON)
   @ApiResponses(value = {
-       @ApiResponse(code = HttpURLConnection.HTTP_OK, message = "res")
+       @ApiResponse(code = HttpURLConnection.HTTP_OK, message = "user description")
   })
   @ApiOperation(value = "testpost", notes = " ")
   public Response testpost(String body) {
@@ -117,7 +117,7 @@ public class Res extends RESTService {
     // res
     boolean res_condition = true;
     if(res_condition) {
-      JSONObject res = new JSONObject();
+      JSONObject res = new classes().new User().toJSON();
 
       
 
